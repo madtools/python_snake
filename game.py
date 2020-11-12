@@ -16,7 +16,8 @@ BODY = "O"
 FOOD = "$"
 EMPTY = " "
 SPEED_HORIZONTAL = 100
-SPEED_VERTICAL = 200
+SPEED_VERTICAL = 150
+
 
 class Snake:
     def __init__(self, size, start_y, start_x):
@@ -48,7 +49,7 @@ class Snake:
             new_head = [head[0]+1, head[1]]
         if new_head:
             self.body.insert(0, new_head)
-            self.dead_part  = self.body.pop(-1)
+            self.dead_part = self.body.pop(-1)
 
     def grow(self):
         self.body.append(self.dead_part)
